@@ -1,6 +1,11 @@
 class Unicorn
-    attr_accessor :name
-    def initialize(name)
+    attr_accessor :name, :color
+    def initialize(name, color = "white")
         @name = name
+        @color = color
+    end
+
+    def white?
+        @color == "white"
     end
 end

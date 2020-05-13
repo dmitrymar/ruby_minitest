@@ -13,4 +13,24 @@ class UnicornTest < Minitest::Test
         unicorn = Unicorn.new("Joseph")
         assert_equal "Joseph", unicorn.name
     end
+
+    def test_it_is_white_by_default
+        unicorn = Unicorn.new("Margaret")
+        assert_equal "white", unicorn.color
+    end
+
+    def test_it_knows_if_it_is_white
+        unicorn = Unicorn.new("Margaret")
+        assert unicorn.white?, "Elisabeth should be white, but isn't."
+    end
+
+    def test_it_does_not_have_to_be_white
+        unicorn = Unicorn.new("Barbara", "purple")
+        assert_equal "purple", unicorn.color
+    end
+
+    def test_it_knows_if_it_is_not_white
+        unicorn = Unicorn.new("Roxanne", "green")
+        refute unicorn.white?, "I guess Roxanne thinks she's white, when really she is green."
+    end
 end
