@@ -8,4 +8,8 @@ class Unicorn
     def white?
         @color == "white"
     end
+    
+    def say(word)
+        return "**;* #{word} **;*"
+    end
 end
